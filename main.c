@@ -9,18 +9,21 @@ int main(int agrc,char* agrv[]){
   if(agrc ==1 ){
     puts("Entrez une ecriture préfixée au clavier");
     fgets(s, 500, stdin);
-    tree = construitArbre(s);
+    tree = lireArbre(s);
     puts("affichage :");
     afficheArbre(tree);
   }
   if(agrc == 2){
-    printf("lecture du fichier '%s' ", agrv[1] );
+    int  n = 0;
+    printf("lecture du fichier '%s'\n", agrv[1] );
     FILE *f;
     f = fopen(agrv[1],"r");
     while(!feof(f)){
+      n++;
       fgets(s, 500,f);
-      tree = construitArbre(s);
-      puts("affichage");
+      puts("");
+      tree = lireArbre(s);
+      printf("expression %d\n", n);
       afficheArbre(tree);
     }
     fclose(f);

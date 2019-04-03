@@ -11,6 +11,9 @@ all : $(EXE)
 main : fonctions.o main.o arbre.o
 	gcc -o $@ $^ $(LDFLAGS)
 
+evalArbre : fonctions.o evalArbre.o arbre.o
+	gcc -o $@ $^ $(LDFLAGS)
+
 expression5 : expression5.o fonctions.o arbre.o traceexp.o simplifie.o analyse2.o
 	gcc -o $@ $^ $(LDFLAGS)
 
