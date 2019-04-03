@@ -1,7 +1,7 @@
 
 DIRSDL=/users/prog1a/C/librairie/2011
 CFLAGS=-c -g -O2
-LFLAGS= -lSDLmain -lSDL -lm
+LDFLAGS= -lSDLmain -lSDL -lm
 
 
 EXE=expression1 expression2 expression3 expression4 expression5
